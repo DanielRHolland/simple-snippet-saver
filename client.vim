@@ -12,7 +12,7 @@ function! s:get_visual_selection() range
 endfunction
 
 function! s:post_snippet() range
-    let url = 'https://pi.danrh.net/snippets'
+    let url = '<add url here>'
     let data = s:get_visual_selection()
     let command = 'curl -H "content-type: text/plain" -H "authorization: Bearer <add-apikey-here>" -X POST -d ' . shellescape(data) . ' ' . shellescape(url) . ' 2>/dev/null'
     let response = system(command)
